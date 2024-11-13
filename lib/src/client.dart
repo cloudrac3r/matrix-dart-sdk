@@ -187,6 +187,9 @@ class Client extends MatrixApi {
   /// Returns the current login state.
   bool isLogged() => accessToken != null;
 
+  /// Returns a dict of Authorization -> $accessToken.
+  Map<String, String> get headers => {'Authorization': "Bearer $accessToken"};
+
   /// A list of all rooms the user is participating or invited.
   List<Room> get rooms => _rooms;
   List<Room> _rooms = [];
