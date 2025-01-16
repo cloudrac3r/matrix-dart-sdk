@@ -23,7 +23,10 @@ dependencies:
   matrix_file_e2ee: ^1.0.5
   isolate: ^2.0.3
   logger: ^0.9.4
-  matrix_api_lite: ^0.2.0
+  matrix_api_lite:
+    git:
+      url: https://github.com/cloudrac3r/matrix_api_lite.git
+      ref: c608b5524626890bae6396b3f7d9aa65b7a8953f
 
 dev_dependencies:
   test: ^1.15.7
@@ -34,3 +37,5 @@ dev_dependencies:
   dapackages: ^1.4.0
   #flutter_test:
     #sdk: flutter
+
+publish_to: none
