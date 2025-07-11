@@ -84,8 +84,7 @@ class Timeline {
         },
       );
       try {
-        await Future.delayed(const Duration(seconds: 2));
-        _proccessHistoryUpdates();
+        _processHistoryUpdates();
       } finally {
         _collectHistoryUpdates = false;
         isRequestingHistory = false;
@@ -93,7 +92,7 @@ class Timeline {
     }
   }
 
-  void _proccessHistoryUpdates() async {
+  void _processHistoryUpdates() async {
     _collectHistoryUpdates = false;
     for (final update in _historyUpdates) {
       _handleEventUpdate(await update.decrypt(room, store: true),
